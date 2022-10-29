@@ -1,0 +1,188 @@
+:root {
+  --sky-color1: linear-gradient(
+    180deg,
+    rgba(88, 178, 220, 1),
+    rgba(150, 200, 222, 1) 80%
+  );
+  --sky-color2: linear-gradient(
+    180deg,
+    rgba(247, 194, 66, 1),
+    rgba(252, 159, 77, 1) 80%
+  );
+  --sky-color3: linear-gradient(
+    180deg,
+    rgba(8, 25, 45, 1),
+    rgba(38, 30, 71, 1) 80%
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  /* border: 3px solid tomato; */
+  width: 100vw;
+  height: 100vh;
+}
+
+.background {
+  position: relative;
+  /* display: flex;
+  justify-content: center;
+  align-items: flex-end; */
+  background: rgb(218, 201, 166); /*TODO 暗暈*/
+  width: 100%;
+  height: 100%;
+}
+
+.windows,
+.lights {
+  /* 位置 */
+  position: absolute;
+  top: 10%;
+  /* 內部排版 */
+  display: flex;
+  justify-content: space-evenly;
+  /* 其他 */
+  width: 100%;
+}
+
+/* WINDOWS */
+.window {
+  /* 樣式 */
+  width: 100px;
+  height: 300px;
+
+  border: 5px solid rgb(135, 102, 51);
+  border-radius: 1%;
+  cursor: pointer;
+}
+
+/* LIGHTS */
+.lights {
+  /* border: 3px solid tomato; */
+  top: 0;
+}
+
+.light {
+  /* border: 3px solid tomato; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.light-line {
+  width: 4px;
+  height: 50px;
+  background: rgb(28, 28, 28);
+}
+
+.light-shade {
+  width: 40px;
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  border-bottom: 40px solid rgb(28, 28, 28);
+}
+
+.light-bulb {
+  width: 40px;
+  height: 20px;
+  background: lightgray;
+  border-radius: 0 0 50% 50%;
+  border: 0 1% 1% 1%;
+  border-style: solid;
+  border-color: rgb(28, 28, 28);
+}
+
+.window-morning {
+  background: var(--sky-color1);
+}
+
+.window-dusk {
+  background: var(--sky-color2);
+}
+
+.window-night {
+  background: var(--sky-color3);
+}
+
+.light-bulb-night {
+  background: rgb(246, 197, 85);
+}
+
+/* TABLE */
+.table {
+  /* border: 3px solid tomato; */
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30%;
+  background: var(--table-color);
+  border-left: 5vw solid transparent;
+  border-right: 5vw solid transparent;
+  border-bottom: 30vh solid rgb(86, 63, 46);
+}
+
+.laptop {
+  /* 位置 */
+  position: absolute;
+  bottom: 0;
+  /* 內部排版 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* 樣式 */
+  width: 100%;
+}
+
+.laptop-top {
+  border: 3px solid silver;
+  border-radius: 5%;
+  width: 300px;
+  height: 200px;
+  background: rgb(28, 28, 28);
+}
+
+.screen {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 20px;
+  width: 270px;
+  height: 160px;
+  background: white;
+  font-size: 3rem;
+}
+
+.laptop-bottom {
+  /* border: 3px solid tomato; */
+  width: 300px;
+  height: 120px;
+  background: silver;
+  border-radius: 5% 5% 0 0;
+  /* border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 150px solid silver; */
+}
+
+.keyboard {
+  position: absolute;
+  bottom: 0;
+  width: 250px;
+  height: 100px;
+  background: repeating-linear-gradient(
+    rgb(28, 28, 28),
+    rgb(28, 28, 28) 20%,
+    silver 20%,
+    silver 25%
+  );
+}
